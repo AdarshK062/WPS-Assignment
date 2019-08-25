@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    window.onload = function(){
+  if(typeof(Storage) !== "undefined") {
+    if (localStorage.visitorcount) {
+      localStorage.visitorcount = Number(localStorage.visitorcount)+1;
+    } else {
+      localStorage.visitorcount = 1;
+    }
+    document.getElementById("result").innerHTML = "No of Visitors: " + localStorage.visitorcount;
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+</script>
+<style>
+body {
+    text-align:center;
+}
+    </style>
+</head>
+<body>
+    <h1>Visitor Counter</h1>
+
+<div id="result"></div>
+<br>
+<br>
+<img src="http://www.wieistmeineip.de/ip-address/" border="0" width="125" height="125" alt="IP" />
+
+</body>
+</html>
